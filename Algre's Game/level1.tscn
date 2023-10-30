@@ -1,6 +1,6 @@
 [gd_scene load_steps=28 format=3 uid="uid://dkd40hetwyxwx"]
 
-[ext_resource type="Texture2D" uid="uid://bmvl8e5c4ft1m" path="res://assets/roads2W2.png" id="1_mnoiq"]
+[ext_resource type="Texture2D" uid="uid://dxkd5na3h4sa4" path="res://assets/roads2W2.png" id="1_mnoiq"]
 [ext_resource type="Texture2D" uid="uid://c32rdhj6lshc7" path="res://assets/road with directions.png.png" id="2_kjaxo"]
 [ext_resource type="PackedScene" uid="uid://d1lopd3ywhf5k" path="res://NPC1.tscn" id="3_m110p"]
 [ext_resource type="Texture2D" uid="uid://bystglc4cfpf3" path="res://assets/with bush.png" id="3_sxti4"]
@@ -3463,7 +3463,6 @@ script = ExtResource("13_8h8jb")
 
 [node name="Car" parent="." instance=ExtResource("10_kdvbr")]
 position = Vector2(2613, 2816)
-hit = false
 
 [connection signal="pressed" from="UIManager/PauseMenu/MarginContainer/VBoxContainer/Resume" to="UIManager" method="_on_resume_pressed"]
 [connection signal="pressed" from="UIManager/PauseMenu/MarginContainer/VBoxContainer/Restart" to="UIManager" method="_on_restart_pressed"]

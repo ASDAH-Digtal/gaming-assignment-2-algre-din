@@ -1,6 +1,6 @@
 [gd_scene load_steps=28 format=3 uid="uid://bv428nhd6h7m6"]
 
-[ext_resource type="Texture2D" uid="uid://bmvl8e5c4ft1m" path="res://assets/roads2W2.png" id="1_n5ds7"]
+[ext_resource type="Texture2D" uid="uid://dxkd5na3h4sa4" path="res://assets/roads2W2.png" id="1_n5ds7"]
 [ext_resource type="Texture2D" uid="uid://c32rdhj6lshc7" path="res://assets/road with directions.png.png" id="2_ndotv"]
 [ext_resource type="Texture2D" uid="uid://bystglc4cfpf3" path="res://assets/with bush.png" id="3_4553q"]
 [ext_resource type="Script" path="res://UIManagerLevel2.gd" id="4_wibrd"]

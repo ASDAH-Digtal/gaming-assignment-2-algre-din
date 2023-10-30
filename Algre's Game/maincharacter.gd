@@ -99,6 +99,6 @@ func die():
 	GameManager.main_menu()
 
 
-#func _on_area_2d_area_entered(area):
-#	if area.get_parent() is NPC:
-#		take_damage(1)
+func _on_area_2d_area_entered(area):
+	if area.get_parent() is NPC:
+		take_damage(1)

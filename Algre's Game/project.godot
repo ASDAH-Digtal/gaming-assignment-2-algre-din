@@ -10,13 +10,13 @@ config_version=5
 
 [application]
 
-config/name="car_steering"
-run/main_scene="res://main_menu.tscn"
+config/name="drive_safe"
+run/main_scene="res://scenes/main_menu.tscn"
 config/features=PackedStringArray("4.0", "Forward Plus")
 
 [autoload]
 
-GameManager="*res://GameManager.gd"
+GameManager="*res://scripts/game_manager.gd"
 
 [display]
 

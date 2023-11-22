@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dponl1vnsn2gu" path="res://assets/background_image.png" id="1_0nli1"]
 [ext_resource type="Script" path="res://scripts/levels.gd" id="1_eoiye"]
-[ext_resource type="FontFile" uid="uid://dt6rw1y18o21p" path="res://assets/PressStart2P-Regular.ttf" id="2_i4x5i"]
+[ext_resource type="FontFile" uid="uid://dt6rw1y18o21p" path="res://assets/press_start2p_regular.ttf" id="2_i4x5i"]
 
 [node name="Levels" type="Control"]
 layout_mode = 3

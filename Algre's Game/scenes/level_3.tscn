@@ -1,13 +1,13 @@
-[gd_scene load_steps=29 format=3 uid="uid://d22vc65wqals0"]
+[gd_scene load_steps=29 format=3 uid="uid://c352rikv5tlm2"]
 
 [ext_resource type="Texture2D" uid="uid://dxkd5na3h4sa4" path="res://assets/roads2W2.png" id="1_mho32"]
 [ext_resource type="Texture2D" uid="uid://c32rdhj6lshc7" path="res://assets/road_with_directions.png.png" id="2_7oskl"]
 [ext_resource type="Texture2D" uid="uid://bystglc4cfpf3" path="res://assets/roads_with_bush.png" id="3_pyk5d"]
 [ext_resource type="Script" path="res://scripts/tile_map.gd" id="4_mqfdo"]
 [ext_resource type="Script" path="res://scripts/ui_manager_level3.gd" id="5_tt6eh"]
-[ext_resource type="PackedScene" uid="uid://bxtpyc8fwvxs5" path="res://scenes/control_panel.tscn" id="6_plasg"]
+[ext_resource type="PackedScene" uid="uid://y73kr6mcps4o" path="res://scenes/control_panel.tscn" id="6_plasg"]
+[ext_resource type="FontFile" uid="uid://dt6rw1y18o21p" path="res://assets/press_start2p_regular.ttf" id="7_w2n24"]
 [ext_resource type="Texture2D" uid="uid://bls6xalo7ppik" path="res://assets/star.png" id="7_yfjbr"]
-[ext_resource type="FontFile" uid="uid://dt6rw1y18o21p" path="res://assets/PressStart2P-Regular.ttf" id="8_uadv2"]
 [ext_resource type="PackedScene" path="res://scenes/star.tscn" id="9_87b6j"]
 [ext_resource type="PackedScene" path="res://scenes/checkpoint.tscn" id="10_itcwh"]
 [ext_resource type="PackedScene" uid="uid://y24in5pck2if" path="res://scenes/npc_1.tscn" id="11_7yd50"]
@@ -3065,7 +3065,7 @@ offset_bottom = 80.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("8_uadv2")
+theme_override_fonts/font = ExtResource("7_w2n24")
 theme_override_font_sizes/font_size = 20
 text = "0"
 vertical_alignment = 1
@@ -3105,7 +3105,7 @@ custom_minimum_size = Vector2(50, 30)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
-theme_override_fonts/font = ExtResource("8_uadv2")
+theme_override_fonts/font = ExtResource("7_w2n24")
 text = "Resume"
 
 [node name="Restart" type="Button" parent="UIManager/PauseMenu/MarginContainer/VBoxContainer"]
@@ -3113,7 +3113,7 @@ custom_minimum_size = Vector2(50, 30)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
-theme_override_fonts/font = ExtResource("8_uadv2")
+theme_override_fonts/font = ExtResource("7_w2n24")
 text = "Restart"
 
 [node name="About" type="Button" parent="UIManager/PauseMenu/MarginContainer/VBoxContainer"]
@@ -3121,7 +3121,7 @@ visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
-theme_override_fonts/font = ExtResource("8_uadv2")
+theme_override_fonts/font = ExtResource("7_w2n24")
 text = "About"
 
 [node name="Main Menu" type="Button" parent="UIManager/PauseMenu/MarginContainer/VBoxContainer"]
@@ -3129,7 +3129,7 @@ custom_minimum_size = Vector2(50, 30)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
-theme_override_fonts/font = ExtResource("8_uadv2")
+theme_override_fonts/font = ExtResource("7_w2n24")
 text = "Main Menu"
 
 [node name="WinScreen" type="ColorRect" parent="UIManager"]
@@ -3165,7 +3165,7 @@ size_flags_vertical = 4
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
-theme_override_fonts/font = ExtResource("8_uadv2")
+theme_override_fonts/font = ExtResource("7_w2n24")
 text = "Level 3
 complete!"
 horizontal_alignment = 1
@@ -3174,7 +3174,7 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
-theme_override_fonts/font = ExtResource("8_uadv2")
+theme_override_fonts/font = ExtResource("7_w2n24")
 text = "Score:1210"
 
 [node name="Restart" type="Button" parent="UIManager/WinScreen/MarginContainer/VBoxContainer"]
@@ -3183,21 +3183,21 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
 theme_override_colors/font_color = Color(0.933333, 0.933333, 0.933333, 1)
-theme_override_fonts/font = ExtResource("8_uadv2")
+theme_override_fonts/font = ExtResource("7_w2n24")
 text = "Restart"
 
 [node name="Levels" type="Button" parent="UIManager/WinScreen/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
-theme_override_fonts/font = ExtResource("8_uadv2")
+theme_override_fonts/font = ExtResource("7_w2n24")
 text = "Levels"
 
 [node name="Main Menu" type="Button" parent="UIManager/WinScreen/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
-theme_override_fonts/font = ExtResource("8_uadv2")
+theme_override_fonts/font = ExtResource("7_w2n24")
 text = "Main Menu"
 
 [node name="pauseplay" type="Label" parent="UIManager"]
@@ -3207,7 +3207,7 @@ offset_right = 327.0
 offset_bottom = 96.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("8_uadv2")
+theme_override_fonts/font = ExtResource("7_w2n24")
 theme_override_font_sizes/font_size = 12
 text = ">Pause/Play : \"Esc\""
 
@@ -3218,7 +3218,7 @@ offset_right = 356.0
 offset_bottom = 126.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("8_uadv2")
+theme_override_fonts/font = ExtResource("7_w2n24")
 theme_override_font_sizes/font_size = 12
 text = ">Car Settings : \"Tab\""
 
@@ -3237,7 +3237,7 @@ grow_vertical = 2
 size_flags_vertical = 0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("8_uadv2")
+theme_override_fonts/font = ExtResource("7_w2n24")
 theme_override_font_sizes/font_size = 12
 text = "Level 3"
 horizontal_alignment = 1
@@ -3603,7 +3603,7 @@ offset_top = 150.0
 offset_right = 3906.0
 offset_bottom = 236.0
 theme_override_colors/font_color = Color(0.0117647, 0.227451, 0.0627451, 1)
-theme_override_fonts/font = ExtResource("8_uadv2")
+theme_override_fonts/font = ExtResource("7_w2n24")
 theme_override_font_sizes/font_size = 40
 text = "Three-point turn
 Don't hit the curb!"

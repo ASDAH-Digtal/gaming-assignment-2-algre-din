@@ -1,8 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://dpv60mt26xgch"]
+[gd_scene load_steps=7 format=3 uid="uid://hyyd52l0uxt1"]
 
 [ext_resource type="Script" path="res://scripts/about.gd" id="1_hkvsr"]
-[ext_resource type="FontFile" uid="uid://dt6rw1y18o21p" path="res://assets/PressStart2P-Regular.ttf" id="2_56pc1"]
 [ext_resource type="Texture2D" uid="uid://dponl1vnsn2gu" path="res://assets/background_image.png" id="2_hv7f7"]
+[ext_resource type="FontFile" uid="uid://dt6rw1y18o21p" path="res://assets/press_start2p_regular.ttf" id="3_38lr1"]
 [ext_resource type="Texture2D" uid="uid://y0r2o1n5ot7p" path="res://assets/new_checkpoint_up.png" id="4_4prcc"]
 [ext_resource type="Texture2D" uid="uid://b1grv0po5h5nq" path="res://assets/new_checkpoint.png" id="5_nvpdj"]
 [ext_resource type="Texture2D" uid="uid://bhkmqg1wlrqwc" path="res://assets/about_main_character.png" id="6_tp52j"]
@@ -44,7 +44,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
 theme_override_colors/font_color = Color(0.0117647, 0.227451, 0.0627451, 1)
-theme_override_fonts/font = ExtResource("2_56pc1")
+theme_override_fonts/font = ExtResource("3_38lr1")
 theme_override_font_sizes/font_size = 40
 text = "ABOUT"
 
@@ -76,7 +76,7 @@ size_flags_vertical = 4
 layout_mode = 2
 size_flags_horizontal = 6
 theme_override_colors/font_color = Color(0.192157, 0.352941, 0.188235, 1)
-theme_override_fonts/font = ExtResource("2_56pc1")
+theme_override_fonts/font = ExtResource("3_38lr1")
 text = ">\"A\"
 >left
  arrow"
@@ -98,7 +98,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
 theme_override_colors/font_color = Color(0.192157, 0.352941, 0.188235, 1)
-theme_override_fonts/font = ExtResource("2_56pc1")
+theme_override_fonts/font = ExtResource("3_38lr1")
 text = ">\"S\"
 >down
  arrow"
@@ -132,7 +132,7 @@ expand_mode = 1
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.192157, 0.352941, 0.188235, 1)
-theme_override_fonts/font = ExtResource("2_56pc1")
+theme_override_fonts/font = ExtResource("3_38lr1")
 text = ">\"W\"
 >up
  arrow"
@@ -150,7 +150,7 @@ flip_v = true
 layout_mode = 2
 size_flags_horizontal = 6
 theme_override_colors/font_color = Color(0.192157, 0.352941, 0.188235, 1)
-theme_override_fonts/font = ExtResource("2_56pc1")
+theme_override_fonts/font = ExtResource("3_38lr1")
 text = ">\"D\"
 >right
  arrow"
@@ -187,7 +187,7 @@ layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 6
 theme_override_colors/font_color = Color(0.192157, 0.352941, 0.188235, 1)
-theme_override_fonts/font = ExtResource("2_56pc1")
+theme_override_fonts/font = ExtResource("3_38lr1")
 text = ">Pause/Play : \"Esc\""
 
 [node name="Label4" type="Label" parent="VBoxContainer/HBoxContainer/ColorRect2/MarginContainer/VBoxContainer/VBoxContainer2"]
@@ -195,7 +195,7 @@ layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 6
 theme_override_colors/font_color = Color(0.192157, 0.352941, 0.188235, 1)
-theme_override_fonts/font = ExtResource("2_56pc1")
+theme_override_fonts/font = ExtResource("3_38lr1")
 text = ">Car settings : \"Tab\""
 
 [node name="Label2" type="Label" parent="VBoxContainer"]
@@ -203,7 +203,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
 theme_override_colors/font_color = Color(0.0823529, 0.282353, 0.129412, 1)
-theme_override_fonts/font = ExtResource("2_56pc1")
+theme_override_fonts/font = ExtResource("3_38lr1")
 theme_override_font_sizes/font_size = 20
 text = "Follow the yellow arrows to arrive
 at the destination and complete the level."
@@ -219,7 +219,7 @@ offset_bottom = 63.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
 theme_override_colors/font_color = Color(0.690196, 0.831373, 0.517647, 1)
-theme_override_fonts/font = ExtResource("2_56pc1")
+theme_override_fonts/font = ExtResource("3_38lr1")
 text = "Main Menu"
 
 [connection signal="pressed" from="Main Menu" to="." method="_on_main_menu_pressed"]

@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://cbn0x0k2b51js"]
+[gd_scene load_steps=2 format=3]
 
-[ext_resource type="FontFile" uid="uid://c2d3q3thtouyx" path="res://assets/Poppins-Medium.ttf" id="1_1l506"]
+[ext_resource type="FontFile" uid="uid://c2d3q3thtouyx" path="res://assets/poppins_medium.ttf" id="1_1l506"]
 
 [node name="SettingSlider" type="HBoxContainer"]
 offset_right = 408.0

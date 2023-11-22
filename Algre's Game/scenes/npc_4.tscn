@@ -1,0 +1,148 @@
+[gd_scene load_steps=12 format=3 uid="uid://diaxrqay03yqt"]
+
+[ext_resource type="Script" path="res://scripts/npcs.gd" id="1_wv5th"]
+[ext_resource type="Texture2D" uid="uid://b6827541hjqmf" path="res://assets/blue_right_indicate.png" id="2_qd8wr"]
+[ext_resource type="Texture2D" uid="uid://d8jpp3qqb5hr" path="res://assets/blue_main.png.png" id="2_tkbjt"]
+[ext_resource type="Texture2D" uid="uid://dpyxf8aosdaq7" path="res://assets/blue_left_indicate.png" id="3_17iag"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0heh8"]
+radius = 34.0
+height = 138.0
+
+[sub_resource type="Animation" id="Animation_r6xcr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_mtpco"]
+resource_name = "left_indicate"
+loop_mode = 1
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_17iag")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_2k2ps"]
+resource_name = "right_indicate"
+loop_mode = 1
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_qd8wr")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [1, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pmx0j"]
+_data = {
+"RESET": SubResource("Animation_r6xcr"),
+"left_indicate": SubResource("Animation_mtpco"),
+"right_indicate": SubResource("Animation_2k2ps")
+}
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_6je7e"]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_8f3gb"]
+
+[node name="NPC4" type="CharacterBody2D"]
+rotation = 1.5708
+collision_layer = 7
+collision_mask = 7
+script = ExtResource("1_wv5th")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_tkbjt")
+hframes = 2
+region_enabled = true
+region_rect = Rect2(0, 0, 144, 133)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_0heh8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_pmx0j")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_6je7e")
+anim_player = NodePath("../AnimationPlayer")
+parameters/playback = SubResource("AnimationNodeStateMachinePlayback_8f3gb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_0heh8")

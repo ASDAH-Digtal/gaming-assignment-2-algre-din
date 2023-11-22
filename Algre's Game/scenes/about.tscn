@@ -1,0 +1,225 @@
+[gd_scene load_steps=7 format=3 uid="uid://hyyd52l0uxt1"]
+
+[ext_resource type="Script" path="res://scripts/about.gd" id="1_hkvsr"]
+[ext_resource type="Texture2D" uid="uid://dponl1vnsn2gu" path="res://assets/background_image.png" id="2_hv7f7"]
+[ext_resource type="FontFile" uid="uid://dt6rw1y18o21p" path="res://assets/press_start2p_regular.ttf" id="3_38lr1"]
+[ext_resource type="Texture2D" uid="uid://y0r2o1n5ot7p" path="res://assets/new_checkpoint_up.png" id="4_4prcc"]
+[ext_resource type="Texture2D" uid="uid://b1grv0po5h5nq" path="res://assets/new_checkpoint.png" id="5_nvpdj"]
+[ext_resource type="Texture2D" uid="uid://bhkmqg1wlrqwc" path="res://assets/about_main_character.png" id="6_tp52j"]
+
+[node name="About" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hkvsr")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+texture = ExtResource("2_hv7f7")
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0.0117647, 0.227451, 0.0627451, 1)
+theme_override_fonts/font = ExtResource("3_38lr1")
+theme_override_font_sizes/font_size = 40
+text = "ABOUT"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(504, 312)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+color = Color(0.627451, 0.752941, 0.439216, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/ColorRect/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="left" type="Label" parent="VBoxContainer/HBoxContainer/ColorRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_colors/font_color = Color(0.192157, 0.352941, 0.188235, 1)
+theme_override_fonts/font = ExtResource("3_38lr1")
+text = ">\"A\"
+>left
+ arrow"
+
+[node name="left arrow" type="TextureRect" parent="VBoxContainer/HBoxContainer/ColorRect/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture = ExtResource("4_4prcc")
+expand_mode = 1
+flip_h = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/ColorRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="down" type="Label" parent="VBoxContainer/HBoxContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0.192157, 0.352941, 0.188235, 1)
+theme_override_fonts/font = ExtResource("3_38lr1")
+text = ">\"S\"
+>down
+ arrow"
+
+[node name="down arrow" type="TextureRect" parent="VBoxContainer/HBoxContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+texture = ExtResource("5_nvpdj")
+expand_mode = 1
+flip_h = true
+
+[node name="car" type="TextureRect" parent="VBoxContainer/HBoxContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(90, 55)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+texture = ExtResource("6_tp52j")
+expand_mode = 1
+
+[node name="up arrow" type="TextureRect" parent="VBoxContainer/HBoxContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+texture = ExtResource("5_nvpdj")
+expand_mode = 1
+
+[node name="up" type="Label" parent="VBoxContainer/HBoxContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.192157, 0.352941, 0.188235, 1)
+theme_override_fonts/font = ExtResource("3_38lr1")
+text = ">\"W\"
+>up
+ arrow"
+
+[node name="right arrow" type="TextureRect" parent="VBoxContainer/HBoxContainer/ColorRect/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture = ExtResource("4_4prcc")
+expand_mode = 1
+flip_v = true
+
+[node name="right" type="Label" parent="VBoxContainer/HBoxContainer/ColorRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_colors/font_color = Color(0.192157, 0.352941, 0.188235, 1)
+theme_override_fonts/font = ExtResource("3_38lr1")
+text = ">\"D\"
+>right
+ arrow"
+
+[node name="ColorRect2" type="ColorRect" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(504, 312)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+color = Color(0.627451, 0.752941, 0.439216, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer/ColorRect2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/ColorRect2/MarginContainer"]
+custom_minimum_size = Vector2(400, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/ColorRect2/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 6
+
+[node name="Label3" type="Label" parent="VBoxContainer/HBoxContainer/ColorRect2/MarginContainer/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0.192157, 0.352941, 0.188235, 1)
+theme_override_fonts/font = ExtResource("3_38lr1")
+text = ">Pause/Play : \"Esc\""
+
+[node name="Label4" type="Label" parent="VBoxContainer/HBoxContainer/ColorRect2/MarginContainer/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0.192157, 0.352941, 0.188235, 1)
+theme_override_fonts/font = ExtResource("3_38lr1")
+text = ">Car settings : \"Tab\""
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0.0823529, 0.282353, 0.129412, 1)
+theme_override_fonts/font = ExtResource("3_38lr1")
+theme_override_font_sizes/font_size = 20
+text = "Follow the yellow arrows to arrive
+at the destination and complete the level."
+horizontal_alignment = 1
+uppercase = true
+
+[node name="Main Menu" type="Button" parent="."]
+layout_mode = 1
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 77.0
+offset_bottom = 63.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.690196, 0.831373, 0.517647, 1)
+theme_override_fonts/font = ExtResource("3_38lr1")
+text = "Main Menu"
+
+[connection signal="pressed" from="Main Menu" to="." method="_on_main_menu_pressed"]

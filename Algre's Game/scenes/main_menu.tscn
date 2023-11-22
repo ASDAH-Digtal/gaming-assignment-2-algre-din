@@ -1,0 +1,107 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6qxih6de3tc5"]
+
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_3v6qr"]
+[ext_resource type="Texture2D" uid="uid://dponl1vnsn2gu" path="res://assets/background_image.png" id="2_pwyi7"]
+[ext_resource type="FontFile" uid="uid://dt6rw1y18o21p" path="res://assets/press_start2p_regular.ttf" id="3_xcuxq"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3v6qr")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_pwyi7")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+size_flags_stretch_ratio = 0.0
+theme_override_colors/font_color = Color(0.0117647, 0.227451, 0.0627451, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.717647, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0.717647, 0, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("3_xcuxq")
+theme_override_font_sizes/font_size = 50
+text = "DRIVE SAFE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Start" type="Button" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+focus_neighbor_top = NodePath("../Quit")
+theme_override_colors/font_color = Color(0.592157, 0.796078, 0.298039, 1)
+theme_override_fonts/font = ExtResource("3_xcuxq")
+text = "Start"
+icon_alignment = 1
+
+[node name="Levels" type="Button" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0.592157, 0.796078, 0.298039, 1)
+theme_override_fonts/font = ExtResource("3_xcuxq")
+text = "Levels"
+icon_alignment = 1
+
+[node name="About" type="Button" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0.592157, 0.796078, 0.298039, 1)
+theme_override_fonts/font = ExtResource("3_xcuxq")
+text = "About"
+icon_alignment = 1
+
+[node name="Quit" type="Button" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+focus_neighbor_bottom = NodePath("../Start")
+theme_override_colors/font_color = Color(0.592157, 0.796078, 0.298039, 1)
+theme_override_fonts/font = ExtResource("3_xcuxq")
+text = "Quit"
+icon_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/Levels" to="." method="_on_levels_pressed"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/About" to="." method="_on_about_pressed"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
